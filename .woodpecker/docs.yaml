@@ -92,7 +92,7 @@ steps:
   # update latest and next version
   version-next:
     image: *alpine_image
-    commands:
+    com.mands:
       - apk add jq
       - jq '.next = "next-${CI_COMMIT_SHA:0:10}"' ./docs_repo/version.json > ./docs_repo/version.json.tmp
       - mv ./docs_repo/version.json.tmp ./docs_repo/version.json
